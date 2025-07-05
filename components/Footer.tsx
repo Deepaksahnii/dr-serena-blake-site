@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-[#F3F0E8] text-center text-[#41413F] py-8 px-4 border-t border-[#7E7E6B]">
@@ -23,9 +25,9 @@ const Footer = () => {
 
         
         <div className="flex flex-wrap justify-center gap-4 text-sm sm:text-base pt-2">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">Good Faith Estimate</a>
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="#" className="hover:underline">Privacy Policy</Link>
+          <Link href="#" className="hover:underline">Good Faith Estimate</Link>
         </div>
 
    
