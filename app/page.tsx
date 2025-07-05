@@ -3,6 +3,7 @@ import About from "./about/About";
 import Services from "./service/Services";
 import Contact from "./contact/Contact";
 import Footer from "@/components/Footer";
+import Faq from "./faq/Faq";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <Services />
+      <Faq/>
       <Contact />
       <Footer/>
     </main>

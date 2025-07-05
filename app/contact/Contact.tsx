@@ -13,138 +13,104 @@ const Contact = () => {
       return;
     }
 
-    // Handle form submission here (e.g. send data to API)
+    // Handle form submission here
     alert("Form submitted successfully!");
   };
 
   return (
-    <section className="bg-white py-12 px-4">
+    <section className="bg-white py-10 px-4 sm:px-6 md:px-10">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-[#144232] mb-4 text-center">
           Get in touch
         </h2>
+
         {/* Subheading */}
-        <p className="text-gray-700 mb-8">
-          Simply fill out this form and Dr. Serena will be in touch with you soon.
+        <p className="text-[#144232] text-center mb-8 text-sm sm:text-base">
+          Simply fill out this form and Dr. Serena will be in touch with you soon, usually within one business day. This form is safe, private and completely free.
         </p>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form
+          onSubmit={handleSubmit}
+          className="border-2 border-[#144232] rounded-[10px] p-6 sm:p-8 space-y-6"
+        >
           {/* Name */}
           <div>
-            <label className="block text-gray-700 font-medium mb-1">
+            <label className="block text-[#144232] font-medium mb-1">
               Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
               name="name"
               required
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-2 border-[#144232] text-[#144232] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#144232]"
             />
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-gray-700 font-medium mb-1">
+            <label className="block text-[#144232] font-medium mb-1">
               Email <span className="text-red-500">*</span>
             </label>
             <input
               type="email"
               name="email"
               required
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-2 border-[#144232] text-[#144232] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#144232]"
             />
           </div>
 
           {/* Phone */}
           <div>
-            <label className="block text-gray-700 font-medium mb-1">
+            <label className="block text-[#144232] font-medium mb-1">
               Phone <span className="text-red-500">*</span>
             </label>
             <input
               type="tel"
               name="phone"
               required
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-2 border-[#144232] text-[#144232] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#144232]"
             />
           </div>
 
-          {/* Message */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Message <span className="text-red-500">*</span>
-            </label>
-            <textarea
-              name="message"
-              rows={4}
-              required
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></textarea>
-          </div>
-
-          {/* Preferred contact time */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Preferred contact time <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              name="preferredTime"
-              required
-              placeholder="e.g. Weekdays after 3pm"
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <p className="text-gray-500 text-sm mt-1">
-              Let us know when you are typically available for a call or consultation.
-            </p>
-          </div>
-
-          {/* Preferred contact method */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Preferred contact method <span className="text-red-500">*</span>
-            </label>
-            <select
-              name="preferredMethod"
-              required
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">-- Select an option --</option>
-              <option value="phone">Phone</option>
-              <option value="email">Email</option>
-              <option value="text">Text Message</option>
-              <option value="video">Video Call</option>
-            </select>
-          </div>
-
-          {/* I'm not a robot */}
-          <div className="flex items-center">
+          {/* Checkbox */}
+          <div className="flex items-center space-x-3">
             <input
               type="checkbox"
-              id="robotCheck"
-              required
+              id="notRobot"
               checked={isRobot}
-              onChange={(e) => setIsRobot(e.target.checked)}
-              className="mr-2"
+              onChange={() => setIsRobot(!isRobot)}
+              className="border-2 border-[#144232] w-5 h-5 rounded"
             />
-            <label htmlFor="robotCheck" className="text-gray-700">
-              I am not a robot <span className="text-red-500">*</span>
+            <label
+              htmlFor="notRobot"
+              className="text-[#144232] text-sm sm:text-base"
+            >
+              I am not a robot
             </label>
           </div>
 
-          {/* Submit button */}
-          <button
-            type="submit"
-            className="bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700 transition duration-300"
-          >
-            Submit
-          </button>
-
-          {/* Disclaimer */}
-          <p className="text-gray-500 text-sm mt-2">
-            By clicking submit you consent to receive text and emails from Dr. Serena Blake.
-          </p>
+          {/* Button */}
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="
+                border-2 border-[#144232]
+                bg-[#144232] 
+                hover:bg-[#0F3525] 
+                text-white 
+                font-medium 
+                px-8 sm:px-12 
+                py-3 sm:py-4 
+                rounded 
+                w-full sm:w-auto
+                transition-colors duration-300
+              "
+            >
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </section>

@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* Fonts Loading Animation */
+*{
+  font-family: serif;
+  box-sizing: border-box;
+}
 
-/* 1. Define keyframes */
-@keyframes fonts-loading {
-  0%, 99% {
-    color: transparent;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
   100% {
-    color: inherit;
+    transform: rotate(360deg);
   }
 }
 
-/* 2. Apply animation to all elements while fonts are loading */
-main.wf-loading * {
-  animation: fonts-loading 3s;
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
-

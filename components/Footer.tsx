@@ -1,35 +1,51 @@
 const Footer = () => {
   return (
-    <footer className="bg-white text-center text-gray-700 py-10 px-4 border-t border-gray-200">
-      <div className="max-w-2xl mx-auto space-y-4">
+    <footer className="bg-[#F3F0E8] text-center text-[#41413F] py-8 px-4 border-t border-[#7E7E6B]">
+      <div className="max-w-3xl mx-auto flex flex-col items-center space-y-4">
 
         {/* Name + Email */}
-        <div>
-          <p className="font-semibold">Jennifer Hahm, Ph.D., Licensed Psychologist</p>
-          <p className="text-sm">jennifer@drjenniferhahm.com</p>
+        <div className="space-y-1">
+          <p className="text-base sm:text-lg">
+            Dr.Serena Blake, PsyD (Clinical Psychologist)
+          </p>
+          <p className="text-sm sm:text-base">
+            serena@blakepsychology.com
+          </p>
         </div>
 
         {/* Phone + Fax */}
-        <div className="text-sm">
-          <p>Phone: (248) 939-8150 | Fax: (248) 939-8190</p>
+        <div className="text-sm sm:text-base">
+          <p>Phone: (323) 555-0192</p>
         </div>
 
         {/* Address */}
-        <div className="text-sm">
-          <p>28175 Haggerty Rd, Novi, MI 48377</p>
+        <div className="text-sm sm:text-base">
+          <p>1287 Maplewood Drive, Los Angeles, CA 90026</p>
         </div>
 
-        {/* Links */}
-        <div className="flex flex-wrap justify-center gap-4 text-sm pt-2">
+        {/* Links (except Client Portal) */}
+        <div className="flex flex-wrap justify-center gap-4 text-sm sm:text-base pt-2">
           <a href="/" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Privacy Policy</a>
           <a href="#" className="hover:underline">Good Faith Estimate</a>
-          <a href="#" className="hover:underline">Client Portal</a>
         </div>
 
+        {/* Client Portal link */}
+        <div className="pt-4">
+          <a
+            href="#"
+            className="text-base sm:text-lg font-medium hover:underline"
+          >
+            Client Portal
+          </a>
+        </div>
+
+        {/* Divider */}
+        <hr className="w-full border-t border-[#7E7E6B] mt-6" />
+
         {/* Copyright */}
-        <div className="text-xs text-gray-500 pt-4">
-          © 2025 Jennifer Hahm Ph.D. Psychological Services, PLLC. All rights reserved.
+        <div className="text-xs sm:text-sm text-[#7E7E6B] pt-4">
+          © 2025 Dr.Serena Blake, PsyD (Clinical Psychologist) Psychological Services, PLLC. All rights reserved.
         </div>
       </div>
     </footer>
