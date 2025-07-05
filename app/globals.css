@@ -17,3 +17,6 @@
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+[data-nextjs-dev-overlay] {
+  display: none !important;
+}

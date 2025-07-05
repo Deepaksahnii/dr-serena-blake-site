@@ -6,8 +6,8 @@ import logo from "@/public/logo.png";
 
 const Hero = () => {
   return (
-    <section className="bg-[#F3F0E8] px-8 sm:px-12 md:px-8 pb-8 sm:pb-12 md:pb-16">
-      {/* Logo */}
+    <section className="bg-[#F3F0E8] px-8 sm:px-12 md:px-16 pb-8 sm:pb-12 md:pb-16">
+    
       <div className="flex justify-start">
         <Image
           src={logo}
@@ -18,9 +18,9 @@ const Hero = () => {
         />
       </div>
 
-      {/* HERO VIDEO + CONTENT */}
+    
       <div className="relative overflow-hidden mt-4 sm:mt-6">
-        {/* Video Background */}
+     
         <video
           src="/video.mp4"
           autoPlay
@@ -30,10 +30,9 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Black Overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
-        {/* Hero Content */}
+      
         <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-[30rem] md:min-h-[35rem] px-4 sm:px-6 md:px-8 py-6 sm:py-10">
           <h1 className="text-white text-2xl sm:text-4xl md:text-4xl lg:text-7xl font-light leading-snug max-w-2xl">
             Psychological Care for <br /> Change, Insight, and Well-Being

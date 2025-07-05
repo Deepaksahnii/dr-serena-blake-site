@@ -33,7 +33,7 @@ const services = [
 const Services = () => {
   return (
     <>
-      {/* SERVICES SECTION with background */}
+    
       <section className="bg-[#F3F0E8] px-6 sm:px-8 md:px-10 py-10">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           {/* Heading */}
@@ -43,7 +43,7 @@ const Services = () => {
             <span>—one of the highest forms of self-care.</span>
           </h2>
 
-          {/* Paragraph */}
+         
           <p
             className={`${inter.className} text-[#41413F] text-sm sm:text-base md:text-lg font-light leading-relaxed`}
           >
@@ -59,19 +59,18 @@ const Services = () => {
         </div>
 
         <div className="max-w-7xl mx-auto mt-10">
-          {/* Areas of Focus Heading */}
+          
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#41413F] text-center mb-8 sm:mb-12 font-light">
             Areas of Focus
           </h2>
 
-          {/* Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center space-y-4"
               >
-                {/* Circle Image */}
+              
                 <div className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64">
                   <Image
                     src={service.image}
@@ -81,12 +80,12 @@ const Services = () => {
                   />
                 </div>
 
-                {/* Title */}
+              
                 <h3 className="text-lg sm:text-xl md:text-2xl text-[#41413F] font-light">
                   {service.title}
                 </h3>
 
-                {/* Subtitle */}
+                
                 <p
                   className={`${inter.className} text-[#41413F] text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-xs`}
                 >
@@ -98,15 +97,15 @@ const Services = () => {
         </div>
       </section>
 
-      {/* RATES AND INSURANCE SECTION */}
+      
       <section className="bg-[#94B0B0] w-full py-10">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4 px-4 sm:px-6 md:px-8">
-          {/* Heading */}
+         
           <h2 className="text-black text-2xl sm:text-3xl md:text-4xl font-light leading-tight">
             Rates and Insurance
           </h2>
 
-          {/* Fees */}
+        
           <p
             className={`${inter.className} text-black text-sm sm:text-base md:text-lg font-light`}
           >
@@ -118,7 +117,7 @@ const Services = () => {
             Psychological Evaluation: $225
           </p>
 
-          {/* Insurance info */}
+       
           <p
             className={`${inter.className} text-black text-sm sm:text-base md:text-lg font-light pt-4`}
           >
@@ -127,7 +126,7 @@ const Services = () => {
 
           <hr className="w-full border-t border-[#7E7E6B] mt-6" />
 
-          {/* Reimbursement info */}
+        
           <p
             className={`${inter.className} text-black text-xs sm:text-sm md:text-base font-light pt-4`}
           >

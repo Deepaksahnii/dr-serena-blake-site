@@ -42,7 +42,7 @@ const Faq = () => {
                   className="w-full flex items-center justify-between py-4 sm:py-5 text-left focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
-                    {/* Smaller Circle Icon with bold arrow */}
+                    
                     <motion.span
                       initial={false}
                       animate={{ rotate: isOpen ? 90 : 0 }}
@@ -58,7 +58,7 @@ const Faq = () => {
                       &gt;
                     </motion.span>
 
-                    {/* Question Text */}
+               
                     <h3 className="text-[#33607F] text-sm sm:text-base md:text-lg font-normal">
                       {faq.question}
                     </h3>
